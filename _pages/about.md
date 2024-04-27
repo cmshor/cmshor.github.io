@@ -9,14 +9,21 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Box H-5156</p>
+    <p>Western New England University</p>
+    <p>1215 Wilbraham Road</p>
+    <p>Springfield, MA 01119</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
+
+Hello! I am a Professor of Mathematics at [Western New England University](https://www.wne.edu) in Springfield, Massachusetts, where I teach in the undergraduate and masters programs. Each summer, I serve as Director of [PROMYS for Teachers](https://promys.org/programs/for-teachers/) at Boston University.
+
+My research interests over the years have been in number theory, algebraic geometry, and coding theory. In recent years, I have focused more on problems involving numerical semigroups.
+
+
 
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
