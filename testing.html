@@ -32,8 +32,54 @@ Type your own Sage computation below and click “Evaluate”.
     <div class="compute"><script type="text/x-sage">plot(sin(x), (x, 0, 2*pi))</script></div>
     <div class="compute"><script type="text/x-sage">
 @interact
-def f(n=(0,10)):
-    print(2^n)
+def picture_time(str1=input_box('[5,11,12]',type = str, label='gens'),rows=7,columns=6):
+    gens=eval(str1)
+    def add_lists(L1,L2,max):
+        L=[]
+        for l1 in L1:
+            for l2 in L2:
+                if l1+l2<=max:
+                    L.append(l1+l2)
+        return(L)
+
+    def get_multiples(a,max):
+        i=0
+        L=[]
+        while a*i<=max:
+            L.append(a*i)
+            i+=1
+        return(L)
+
+    def get_elts(gens,max):
+        k=len(gens)
+        if k==2:
+            a=gens[0]
+            b=gens[1]
+            L1=get_multiples(a,max)
+            L2=get_multiples(b,max)
+            L=add_lists(L1,L2,max)
+            return(set(L))
+        if k>2:
+            z=gens[k-1]
+            newgens=gens[:-1]
+            Lk=get_multiples(z,max)
+            return(set(add_lists(get_elts(newgens,max),Lk,max)))
+    def build_picture(elts,rows,columns):
+        max=rows*columns-1
+        var('i,j')
+        P=plot([],axes=False)
+        for j in range(rows):
+            for i in range(columns):
+                z=i+j*columns
+                if z in elts:
+                    P+=text(z,(i,j),color="black",fontweight="bold")
+                else:
+                    P+=text(z,(i,j),color="green")
+        show(P)
+    
+    max=rows*columns
+    elts = get_elts(gens,max)
+    build_picture(elts,rows,columns)
 </script></div>
   </body>
 </html>
