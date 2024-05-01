@@ -1,14 +1,14 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"dent":
+  - firstname: ["Nick", "N.", "Nicholas", "Nicholas Dent"]
+    url: https://www.buacademy.org/profile/mr-nick-dent/
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"shaska":
+  - firstname: ["Tony", "T.", "Tanush", "Tony Shaska"]
+    url: https://www.risat.org/shaska.html
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"gassert":
+  - firstname: ["Alden", "T. Alden"]
+    url: https://math.hws.edu/gassert/
 
 "bach":
   - firstname: ["Johann Sebastian", "J. S."]
