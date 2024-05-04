@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Coin game</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Initialize!'});
+    </script>
+  </head>
+  <body>
+
+<h1>Coin game</h1>
+    <h3>Hello PfT workshop participants and aspiring minters!</h3>
+    <p>On this webpage, you can play the minting game with positive integers up to 50.</p>
+
+    Click the Initialize button to get started.
+    <p>
+    <div id="mycell"><script type="text/x-sage">
+gens=[]
+elts=[]
+valid_turn=True
+new_game=1
+
+@interact
+def picture_time(next_move=input_box()):
+    global gens
+    global elts
+    global valid_turn
+    global new_game
+    def add_lists(L1,L2,max):
+        L=[]
+        for l1 in L1:
+            for l2 in L2:
+                if l1+l2<=max:
+                    L.append(l1+l2)
+        return(L)
+
+    def get_multiples(a,max):
+        i=0
+        L=[]
+        while a*i<=max:
+            L.append(a*i)
+            i+=1
+        return(L)
+
+    def get_elts(gens,max):
+        k=len(gens)
+        if k==1:
+            a=gens[0]
+            i=0
+            L=[]
+            while i*a<=max:
+                L.append(i*a)
+                i+=1
+            return(L)
+        if k==2:
+            a=gens[0]
+            b=gens[1]
+            L1=get_multiples(a,max)
+            L2=get_multiples(b,max)
+            L=add_lists(L1,L2,max)
+            return(set(L))
+        if k>2:
+            z=gens[k-1]
+            newgens=gens[:-1]
+            Lk=get_multiples(z,max)
+            return(set(add_lists(get_elts(newgens,max),Lk,max)))
+    def make_unit_square(i,j,taken):
+        if taken:
+            return(polygon([(i,j),(i+1,j),(i+1,j+1),(i,j+1)],fill=True,color="pink"))
+        else:
+            return(polygon([(i,j),(i+1,j),(i+1,j+1),(i,j+1)],fill=False))
+
+    def make_grid(rows,columns):
+        P=plot([],axes=False,aspect_ratio=True)
+        for j in range(1,columns+2):
+            P+=line([(j,0),(j,rows)],color="black")
+        for i in range(rows+1):
+            P+=line([(1,i),(columns+1,i)],color="black")
+        return(P)
+
+    def build_picture(elts,rows,columns,snake=False,squares=False):
+        max=rows*columns-1
+        var('i,j')
+        P=plot([],axes=False,aspect_ratio=True)
+        for j in range(rows):
+            for i in range(1,columns+1):
+                z=i+j*columns
+                P+=make_unit_square(i,j,z in elts)
+                if snake==False:
+                    P+=text(str(z),(i+1/2,j+1/2),color="black",fontsize="medium")
+                if snake==True:
+                    col_num = (1+(-1)^j)*i/2 + (1-(-1)^j)*(columns-1-i)/2 # reverse order on odd rows
+                    P+=text(z,(col_num+1/2,j+1/2),color="black",fontsize="medium")
+        P+=make_grid(rows,columns)
+        return(P)
+    
+    def player(i):
+        if i%2==0:
+            return("A")
+        else:
+            return("B")
+
+    print("This is a game for Player A and Player B. Player A goes first.")
+    print("Rules: The two players take turns naming positive integers (up to 50) that are not the sum of nonnegative multiples of previously named integers. The player who names 1 loses.")
+    if type(next_move)!=Integer:
+        gens=[]
+        elts=[]
+        print("")
+        print("In the grid below, any number which is the sum of nonnegative multiples of named integers is shaded pink. Valid choices are unshaded.")
+        show(build_picture([],5,10))
+        print("Player A, you're up first. Replace the 'None' in the next_move box above with an integer from 1 to 50 and then hit Enter.")
+    else:
+        valid_turn=True
+        if next_move<1 or next_move>50 or type(next_move)!=Integer:
+            print("")
+            print(str(next_move) + " is an invalid choice!")
+            print("Need to choose an integer from 1 to 50. Choose again.")
+            print("Moves thus far:")
+            for i in range(len(gens)):
+                print("Player " + player(i) + " chooses " + str(gens[i]) + ".")
+            print("Current board is below.")
+            elts = get_elts(gens,50)
+            show(build_picture(elts,5,10))
+            print("Next turn: Player " + player(len(gens)) + ".")
+            valid_turn=False
+        else:
+            if gens!=[]:
+                elts = get_elts(gens,50)
+                if next_move in elts:
+                    print("")
+                    print(str(next_move) + " is an invalid choice! Choose again.")
+                    print("Moves thus far:")
+                    for i in range(len(gens)):
+                        print("Player " + player(i) + " chooses " + str(gens[i]) + ".")
+                    print("Current board is below.")
+                    elts = get_elts(gens,50)
+                    show(build_picture(elts,5,10))
+                    print("Next turn: Player " + player(len(gens)) + ".")
+                    valid_turn=False
+        if valid_turn:
+            gens.append(next_move)
+            print("")
+            print("Moves thus far:")
+            for i in range(len(gens)):
+                print("Player " + player(i) + " chooses " + str(gens[i]) + ".")
+            print("Current board is below.")
+            elts = get_elts(gens,50)
+            show(build_picture(elts,5,10))
+            if next_move!=1:
+                print("Next turn: Player " + player(i+1) + ".")
+            else:
+                print("Player " + player(i+1) + " wins!!")
+                print("")
+                print("Hit Initialize to start a new game.")
+</script></div></p>
+<p>Note: It's easy to break this! If you enter a non-integer, it'll break. There are other ways to break it too. If you break it, just hit Initialize to start a new game.</p>
+<p>This visualizer was created in <a href="https://www.sagemath.org">SageMath</a> by <a href="https://cshor.org">Caleb Shor</a> in May 2024. SageMath is free! Try it out at <a href="https://cocalc.com">CoCalc</a>. (And feel free to copy the code for this application from this page's html source.)</p>
+  </body>
+</html>
