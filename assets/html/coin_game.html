@@ -15,10 +15,10 @@
   <body>
 
 <h1>Coin game</h1>
-    <h3>Hello PfT workshop participants and aspiring minters!</h3>
-    <p>On this webpage, you can play the minting game with positive integers up to 50.</p>
+    <h3>Hello PfT workshop participants!</h3>
+    <p>On this webpage, you can play the coin game with positive integers up to 50.</p>
 
-    Click the Initialize button to get started.
+    Click the Initialize button to get started. (Instructions will appear!)
     <p>
     <div id="mycell"><script type="text/x-sage">
 gens=[]
@@ -107,14 +107,18 @@ def picture_time(next_move=input_box()):
             return("B")
 
     print("This is a game for Player A and Player B. Player A goes first.")
-    print("Rules: The two players take turns naming positive integers (up to 50) that are not the sum of nonnegative multiples of previously named integers. The player who names 1 loses.")
+    print("Rules: The two players take turns naming positive integers (up to 50)")
+    print("that are not the sum of nonnegative multiples of previously named integers.")
+    print("The player who names 1 loses.")
     if type(next_move)!=Integer:
         gens=[]
         elts=[]
         print("")
-        print("In the grid below, any number which is the sum of nonnegative multiples of named integers is shaded pink. Valid choices are unshaded.")
+        print("In the grid below, any number which is the sum of nonnegative multiples")
+        print("of named integers is shaded pink. Valid choices are unshaded.")
         show(build_picture([],5,10))
-        print("Player A, you're up first. Replace the 'None' in the next_move box above with an integer from 1 to 50 and then hit Enter.")
+        print("Player A, you're up first! Replace the 'None' in the next_move box above")
+        print("with an integer from 1 to 50 and then hit Enter.")
     else:
         valid_turn=True
         if next_move<1 or next_move>50 or type(next_move)!=Integer:
