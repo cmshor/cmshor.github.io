@@ -1,12 +1,8 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - cmshor
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - cmshor/course-notes-calculus-iii
+  - cmshor/webwork-calculus-iii
+  - cmshor/webwork-DEs
+  
