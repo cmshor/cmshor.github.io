@@ -3,6 +3,6 @@ github_users:
 
 github_repos:
   - cmshor/course-notes-calculus-iii
-  - cmshor/webwork-calculus-iii
-  - cmshor/webwork-DEs
+  #- cmshor/webwork-calculus-iii
+  #- cmshor/webwork-DEs
   
