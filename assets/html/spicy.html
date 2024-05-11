@@ -24,9 +24,9 @@
     <p>
     <div id="mycell"><script type="text/x-sage">
 @interact
-def picture_time(str1=input_box('[6,10,15]', type = str, width=40, label='pack numbers'),
+def picture_time(str1=input_box('[6,14,21]', type = str, width=40, label='pack numbers'),
                  str2=input_box('7', type = str, width=10, label='number of rows'),
-                 str3=input_box('6', type = str, width=10, label='number of columns'),
+                 str3=input_box('8', type = str, width=10, label='number of columns'),
                  snake=checkbox(False, label='snake style')):
     gens=eval(str1)
     rows=eval(str2)
@@ -108,9 +108,11 @@ def picture_time(str1=input_box('[6,10,15]', type = str, width=40, label='pack n
     for i in range(max):
         if i not in elts:
             elts_complement.append(i)
-    print("Given pack numbers " + str(gens) + ", in the image above the red squares represent spicy numbers and the blue squares represent mild numbers.")
+    print("Given pack numbers " + str(gens) + ", in the image above the red squares represent spicy numbers")
+    print("and the blue squares represent mild numbers.")
     print("")
-    print("Among integers from 0 to " + str(max-1) + ", the following are mild: " + str(elts_complement) + ".")
+    print("Among integers from 0 to " + str(max-1) + ", the following are mild: ")
+    print(elts_complement)
 </script></div></p>
 <p>Note: It's easy to break this! If the numbers of rows and columns aren't positive integers, it'll get stuck. Same goes if they're too big! And same if the pack numbers aren't all positive integers written in a list with square brackets. If it gets stuck, hit the Initialize button to restart.</p>
 <p>This visualizer was created in <a href="https://www.sagemath.org">SageMath</a> by <a href="https://cshor.org">Caleb Shor</a> in May 2024. SageMath is free! Try it out at <a href="https://cocalc.com">CoCalc</a>. (And feel free to copy the code for this application from this page's html source.)</p>
