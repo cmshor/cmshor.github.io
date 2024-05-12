@@ -110,9 +110,9 @@ def picture_time(str1=input_box('[6,14,21]', type = str, width=40, label='pack n
         if i not in elts:
             elts_complement.append(i)
     print("Given pack numbers " + str(gens) + ", in the image above the red squares represent spicy numbers")
-    print("and the blue squares represent mild numbers.")
+    print("and the blue squares represent bland numbers.")
     print("")
-    print("Among integers from 0 to " + str(max-1) + ", the following are mild: ")
+    print("Among integers from 0 to " + str(max-1) + ", the following are bland: ")
     print(elts_complement)
 </script></div></p>
 <p>Note: It's easy to break this! If the numbers of rows and columns aren't positive integers, it'll get stuck. Same goes if they're too big! And same if the pack numbers aren't all positive integers written in a list with square brackets. If it gets stuck, hit the Initialize button to restart.</p>
