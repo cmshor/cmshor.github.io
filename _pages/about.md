@@ -26,3 +26,5 @@ My research interests over the years have been in number theory, algebraic geome
 I have grown increasingly interested in using [WeBWorK](https://openwebwork.org/) with the college courses that I teach. I have created problem sets for Calculus III, Differential Equations, and a course that we call Vector Calculus & Fourier Series. I have also created course notes for these courses. I am making all of this material available in Github. Check out my [Repositories](/repositories/) (or, currently, my repository) to see what's available.
 
 This site is new as of May 2024. I hope to add more content/information soon.
+
+If you want to get in touch, please email me at <caleb.shor@wne.edu>.
