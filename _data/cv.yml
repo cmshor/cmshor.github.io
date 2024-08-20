@@ -8,7 +8,6 @@
     #- name: Languages
     #  value: English
 
-
 - title: Education
   type: time_table
   contents:
@@ -30,30 +29,5 @@
         - Thesis title: Elliptic curves and their applications to cryptography
         - Secondary concentration: Computer science
     - title: Budapest Semesters in Mathematics
-      insitution: Technical University of Budapest (via St. Olaf College)
+      institution: Technical University of Budapest (via St. Olaf College)
       year: 1999 (spring)
-        
-- title: Experience
-  type: time_table
-  contents:
-    - title: Professor of Mathematics
-      institution: Western New England University
-      year: 2008-present
-    - title: Director
-      institution: PROMYS for Teachers
-      year: 2012-present (summers)
-    - title: Visiting Assistant Professor
-      institution: Bates College
-      year: 2005-2008
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Numerical semigroups
-    - title: WeBWorK (online homework system)
-    - title: Using/creating free course materials
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Traveling, running, hiking, disc golf
