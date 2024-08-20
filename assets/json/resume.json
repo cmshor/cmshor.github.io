@@ -6,7 +6,7 @@
     "email": "caleb.shor@wne.edu",
     "phone": "(413) 123-4567",
     "url": "https://cshor.org/",
-    "summary": "Professor, Summer program director",
+    "summary": "Professor, Summer program director, Workshop facilitator",
     "location": {
       "address": "WNEU Box H-5156, 1215 Wilbraham Rd",
       "postalCode": "MA 01119",
@@ -16,9 +16,8 @@
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=_qw2lYoAAAAJ"
       }
     ]
   },
@@ -72,8 +71,7 @@
       "institution": "Budapest Semesters in Mathematics",
       "location": "Budapest, Hungary",
       "url": "https://budapestsemesters.com/",
-      "date": "Spring 1999",
-      "courses": ["Dissertation title: On towers of function fields and the construction of the corresponding Goppa codes"]
+      "date": "Spring 1999"
     }
   ],
   "interests": [
