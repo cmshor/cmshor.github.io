@@ -6,9 +6,9 @@
     - name: Profession
       value: Mathematician
     - name: Email
-      value: <caleb.shor@wne.edu>
+      value: <a href="mailto:caleb.shor@wne.edu">caleb.shor@wne.edu</a>
     - name: Website
-      value: <https://cshor.org/>
+      value: <a href="https://cshor.org/">https://cshor.org/</a>
     - name: Summary
       value: Professor, summer program director, workshop facilitator
     #- name: Languages
