@@ -10,7 +10,7 @@
     - name: Website
       value: <a href="https://cshor.org/">https://cshor.org/</a>
     - name: Summary
-      value: Professor, summer program director, workshop facilitator
+      value: University professor, summer program director, workshop facilitator
     #- name: Languages
     #  value: English
 
@@ -19,12 +19,11 @@
   contents:
     - title: Ph.D. in Mathematics
       institution: <a href="https://www.bu,edu">Boston University</a>
-      location: Boston, Massachusetts
       year: 2005
       description:
-        - title: Advisor&#58; <a href="https://en.wikipedia.org/wiki/Emma_Previato">Dr. Emma Previato</a>
+        - Advisor&#58; <a href="https://en.wikipedia.org/wiki/Emma_Previato">Dr. Emma Previato</a>
         - title: Dissertation title&#58; "On towers of function fields and the construction of the corresponding Goppa codes"
-        - title: Fields of study&#58;
+        - title: Fields of study
           contents:
             - Algebraic geometry
             - Coding theory
