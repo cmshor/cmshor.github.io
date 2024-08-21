@@ -19,12 +19,12 @@
   contents:
   - title: Professor
     institution: <a href="https://www.wne.edu/">Western New England University</a>, <a href="https://wne.edu/arts-and-sciences/departments/mathematics/index.cfm">Department of Mathematics</a>
-    description:
-      - Full Professor 2019-present, Associate Professor 2012-2019, Assistant Professor 2008-2012
     year: 2008-present
+    content: <a href="https://wne.edu/directory/caleb-shor.cfm">Faculty profile page</a>
   - title: Program Director
     institution: <a href="https://promys.org/programs/for-teachers/">PROMYS for Teachers</a>, at <a href="https://www.bu.edu">Boston University</a>
     year: 2012-present
+    content: <a href="https://promys.org/about/faculty/caleb-shor/">Faculty profile page</a>
   - title: Visiting Assistant Professor
     institution: <a href="https://www.bates.edu/">Bates College</a>, <a href="https://www.bates.edu/mathematics">Department of Mathematics</a>
     year: 2005-2008
@@ -62,13 +62,17 @@
     - title: WeBWorK (online homework system)
     - title: Using/creating free course materials
     - title: Workshop facilitation for teachers
+- title: Publications
+  type: list
+  contents:
+    - See <a href="/publications">publications</a> page.
 
 - title: Other Interests
   type: list
   contents:
     - Hobbies&#58; Travel, running, hiking, disc golf
 
-- title: For more information...
+- title: For way more information...
   type: list
   contents:
     - See the PDF version of my CV.
