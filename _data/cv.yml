@@ -21,9 +21,9 @@
       institution: <a href="https://www.bu,edu">Boston University</a>
       year: 2005
       description:
-        - Advisor&#58; <a href="https://en.wikipedia.org/wiki/Emma_Previato">Dr. Emma Previato</a>
-        - Dissertation title&#58; "On towers of function fields and the construction of the corresponding Goppa codes"
-        - Fields of study&#58;
+        - title: Advisor&#58; <a href="https://en.wikipedia.org/wiki/Emma_Previato">Dr. Emma Previato</a>
+        - title: Dissertation title&#58; "On towers of function fields and the construction of the corresponding Goppa codes"
+        - title: Fields of study&#58;
           contents:
             - Algebraic geometry
             - Coding theory
@@ -31,9 +31,9 @@
       institution: <a href="https://www.bates.edu">Bates College</a>
       year: 2000
       description:
-        - Advisor&#58; <a href="https://jarhodesuaf.github.io/">Dr. John Rhodes</a>
-        - Thesis title&#58; Elliptic curves and their applications to cryptography
-        - Secondary concentration&#58; Computer science
+        - Advisor: <a href="https://jarhodesuaf.github.io/">Dr. John Rhodes</a>
+        - Thesis title: Elliptic curves and their applications to cryptography
+        - Secondary concentration: Computer science
     - title: Mathematics study abroad program
       institution: <a href="https://budapestsemesters.com">Budapest Semesters in Mathematics</a>, Technical University of Budapest
       year: 1999 (spring)
