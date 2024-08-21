@@ -13,3 +13,53 @@
       value: Professor, summer program director, workshop facilitator
     #- name: Languages
     #  value: English
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Ph.D. in Mathematics
+      institution: <a href="https://www.bu,edu">Boston University</a>
+      year: 2005
+      description:
+        - Advisor: <a href="https://en.wikipedia.org/wiki/Emma_Previato">Dr. Emma Previato</a>
+        - Dissertation title: "On towers of function fields and the construction of the corresponding Goppa codes"
+        - Fields of study:
+          contents:
+            - Algebraic geometry
+            - Coding theory
+    - title: B.S. in Mathematics
+      institution: <a href="https://www.bates.edu">Bates College</a>
+      year: 2000
+      description:
+        - Advisor: <a href="https://jarhodesuaf.github.io/">Dr. John Rhodes</a>
+        - Thesis title: Elliptic curves and their applications to cryptography
+        - Secondary concentration: Computer science
+    - title: Mathematics study abroad program
+      institution: <a href="https://budapestsemesters.com">Budapest Semesters in Mathematics</a>, Technical University of Budapest
+      year: 1999 (spring)
+
+- title: Employment
+  type: time_table
+  contents:
+  - title: Professor of Mathematics
+    institution: <a href="https://wne.edu/arts-and-sciences/departments/mathematics/index.cfm">Western New England University</a>
+    year: 2008-present
+  - title: Program Director
+    institution: <a href="https://promys.org/programs/for-teachers/">PROMYS for Teachers</a>, at Boston University
+    year: 2012-present
+  - title: Visiting Assistant Professor of Mathematics
+    institution: <a href="https://en.wikipedia.org/wiki/Emma_Previato">Bates College</a>
+    year: 2005-2008
+
+- title: Academic Interests
+  type: nested_list
+  contents:
+    - title: Numerical semigroups
+    - title: WeBWorK (online homework system)
+    - title: Using/creating free course materials
+    - title: Workshop facilitation for teachers
+
+- title: Other Interests
+  type: list
+  contents:
+    - <u>Hobbies:</u> Traveling, running, hiking, disc golf
