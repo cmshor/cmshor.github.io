@@ -20,6 +20,7 @@
   - title: Professor
     institution: <a href="https://www.wne.edu/">Western New England University</a>, <a href="https://wne.edu/arts-and-sciences/departments/mathematics/index.cfm">Department of Mathematics</a>
     year: 2008-present
+    location: Springfield, MA
     content: <a href="https://wne.edu/directory/caleb-shor.cfm">Faculty profile page</a>
   - title: Program Director
     institution: <a href="https://promys.org/programs/for-teachers/">PROMYS for Teachers</a>, at <a href="https://www.bu.edu">Boston University</a>
@@ -32,8 +33,8 @@
 - title: Education
   type: time_table
   contents:
-    - title: Ph.D. in Mathematics
-      institution: <a href="https://www.bu,edu">Boston University</a>
+    - title: Ph.D. in <a href="https://math.bu.edu">Mathematics</a>
+      institution: <a href="https://www.bu.edu">Boston University</a>
       year: 2005
       description:
         - Advisor&#58; <a href="https://en.wikipedia.org/wiki/Emma_Previato">Dr. Emma Previato</a>
