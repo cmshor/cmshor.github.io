@@ -28,3 +28,4 @@ I have grown increasingly interested in using [WeBWorK](https://openwebwork.org/
 This site is new as of May 2024. I hope to add more content/information soon.
 
 If you want to get in touch, please email me at <caleb.shor@wne.edu>.
+
