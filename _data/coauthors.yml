@@ -15,7 +15,7 @@
     url: https://simjhsim.com/
 
 "bach":
-  - firstname: ["Johann Sebastian", "J. S."]
+  - firstname: ["Johann Sebastian ", "J. S."]
     url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
 
   - firstname: ["Carl Philipp Emanuel", "C. P. E."]
