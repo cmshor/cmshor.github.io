@@ -115,13 +115,15 @@ def picture_time(str1=input_box('[5,11,12,14]', type = str, width=40, label='pac
                  num_r_mod_m+=1
             else:
                  num_not_r_mod_m+=1
-    gap_ratio = num_r_mod_m / (num_r_mod_m+num_not_r_mod_m)
+    total_gaps = num_r_mod_m + num_not_r_mod_m
+    gap_ratio = num_r_mod_m / total_gaps
     print("Given pack numbers " + str(gens) + ", in the image above the red squares represent semigroup elements")
     print("and the blue squares represent gaps.")
     print("")
-    print("Number of gaps congruent to " + str(r) + "(modulo " + str(m) + "):  " + str(num_r_mod_m))
-    print("Number of gaps not congruent to " + str(r) + "(modulo " + str(m) + "):  " + str(num_not_r_mod_m))
-    print("Ratio of " + str(gap_ratio) + " = " + str(n(gap_ratio,digits=3)))
+    print("Number of gaps congruent to " + str(r) + " (modulo " + str(m) + "):  " + str(num_r_mod_m))
+    print("Number of gaps not congruent to " + str(r) + " (modulo " + str(m) + "):  " + str(num_not_r_mod_m))
+    print("Total number of gaps: " + str(total_gaps))
+    print("Ratio of gaps " +str(r) + " (mod " + str(m) + ") to total number of gaps is " + str(gap_ratio) + " = " + str(n(gap_ratio,digits=3)))
 </script></div></p>
 <p>Note: It's easy to break this! If the numbers of rows and columns aren't positive integers, it'll get stuck. Same goes if they're too big! And same if the pack numbers aren't all positive integers written in a list with square brackets. If it gets stuck, hit the Initialize button to restart.</p>
 <p>This visualizer was created in <a href="https://www.sagemath.org">SageMath</a> by <a href="https://cshor.org">Caleb Shor</a> in May 2024. SageMath is free! Try it out at <a href="https://cocalc.com">CoCalc</a>. (And feel free to copy the code for this application from this page's html source.)</p>
