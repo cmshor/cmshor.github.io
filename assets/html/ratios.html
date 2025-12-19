@@ -20,7 +20,7 @@
     <p>
     <div id="mycell"><script type="text/x-sage">
 @interact
-def picture_time(str1=input_box('[13,18,23,28,33,38,43,48,53,58,63,68,73]', type = str, width=40, label='pack numbers'),
+def picture_time(str1=input_box('[13,18,23,28,33,38,43,48,53,58,63,68,73]', type = str, width=40, label='generators'),
                  str2=input_box('16', type = str, width=10, label='number of rows'),
                  str3=input_box('5', type = str, width=10, label='number of columns'),
                  str4=input_box('3', type = str, width=10, label='congruence class'),
@@ -125,7 +125,7 @@ def picture_time(str1=input_box('[13,18,23,28,33,38,43,48,53,58,63,68,73]', type
     print("Total number of gaps: " + str(total_gaps))
     print("Ratio of gaps " +str(r) + " (mod " + str(m) + ") to total number of gaps is " + str(gap_ratio) + " = " + str(n(gap_ratio,digits=3)))
 </script></div></p>
-<p>Note: It's easy to break this! If the numbers of rows and columns aren't positive integers, it'll get stuck. Same goes if they're too big! And same if the pack numbers aren't all positive integers written in a list with square brackets. If it gets stuck, hit the Initialize button to restart.</p>
+<p>Note: It's easy to break this! If the numbers of rows and columns aren't positive integers, it'll get stuck. Same goes if they're too big! And same if the generators aren't all positive integers written in a list with square brackets. If it gets stuck, hit the Initialize button to restart.</p>
 <p>This visualizer was created in <a href="https://www.sagemath.org">SageMath</a> by <a href="https://cshor.org">Caleb Shor</a> in December 2025. SageMath is free! Try it out at <a href="https://cocalc.com">CoCalc</a>. (And feel free to copy the code for this application from this page's html source.)</p>
   </body>
 </html>
