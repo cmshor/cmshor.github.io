@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Coloring fun!</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Initialize!'});
+    </script>
+  </head>
+  <body>
+
+<h1>Coloring dots!</h1>
+    <h3>Hello PfT workshop participants and coloring fans!</h3>
+    <p>On this webpage, you can visualize dot colorings on a large (ish) scale. We're working in an <i>n</i> by <i>n</i> lattice along with a prime <i>q</i>. We have the function <i>t<sub>q</sub>(m)</i> which gives the highest power of <i>q</i> that divides the positive integer <i>m</i>. We also define <i>t<sub>q</sub>(0)</i> to be infinity.</p>
+    <p>For each lattice point <i>P=(x,y)</i>, we calculate <i>A=t<sub>q</sub>(x)</i>, <i>B=t<sub>q</sub>(y)</i>, and <i>C=t<sub>q</sub>(n)</i>.</p>
+    <p>If <i>A</i> is smallest, color the point blue. If <i>B</i> is smallest, color the point green. If <i>C</i> is smallest, color the point red.</p>
+    <p>In the case of a tie involving <i>A</i>, the winner is <i>A</i>. In case of a tie between <i>B</i> and <i>C</i>, the winner is <i>B</i>. </p>
+
+     Click the Initialize button to get started.
+    <p>
+    <div id="mycell"><script type="text/x-sage">
+@interact
+def picture_time(str1=input_box('10', type = str, width=10, label='n'),
+                 str2=input_box('2', type = str, width=10, label='prime q')
+                 ):
+    nn=eval(str1)
+    qq=eval(str2)
+    
+    def qness(nn,qq):
+        nn=Integer(nn)
+        if nn==0:
+            return(infinity)
+        if not is_prime(qq):
+            return("need q prime")
+        return(nn.valuation(qq))
+
+    def draw_lattice(nn,qq):
+        if nn<=0:
+            return("need n>0")
+        dotsize=0.1
+        P=circle((0,0),dotsize,color="red",fill=True)
+        var('x,y')
+        for x in range(nn+1):
+            for y in range(nn+1):
+                x=Integer(x)
+                y=Integer(y)
+                if qness(x,qq)<=qness(y,qq) and qness(x,qq)<=qness(nn,qq):
+                    P+=circle((x,y),dotsize,color="blue",fill=True)
+                if qness(y,qq)<qness(x,qq) and qness(y,qq)<=qness(nn,qq):
+                    P+=circle((x,y),dotsize,color="green",fill=True)
+                if qness(nn,qq)<qness(x,qq) and qness(nn,qq)<qness(y,qq):
+                    P+=circle((x,y),dotsize,color="red",fill=True)
+        return(P)
+
+    show(draw_lattice(nn,qq))
+    print("This is the coloring for a " + str(nn) + "x" + str(nn) + " lattice, with q = " + str(qq) + ".")
+    print("")
+</script></div></p>
+<p>Note: It's easy to break this! If <i>q</i> isn't prime, or if <i>n</i> isn't a positive integer, you'll get an error message. Choosing appropriate numbers should fix things. If the numbers get too large, it may get stuck. You can hit the Initialize button to restart.</p>
+<p>This visualizer was created in <a href="https://www.sagemath.org">SageMath</a> by <a href="https://cshor.org">Caleb Shor</a> in May 2026. SageMath is free! Try it out at <a href="https://cocalc.com">CoCalc</a>. (And feel free to copy the code for this application from this page's html source.)</p>
+  </body>
+</html>
