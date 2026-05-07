@@ -16,7 +16,8 @@
 
 <h1>Coloring dots!</h1>
     <h3>Hello PfT workshop participants and coloring fans!</h3>
-    <p>On this webpage, you can visualize dot colorings on a large (ish) scale. We're working in an <i>n</i> by <i>n</i> lattice along with a prime <i>q</i>. We have the function <i>t<sub>q</sub>(m)</i> which gives the highest power of <i>q</i> that divides the positive integer <i>m</i>. We also define <i>t<sub>q</sub>(0)</i> to be infinity.</p>
+    <p>On this webpage, you can visualize dot colorings on a large (ish) scale. We're working in an <i>n</i> by <i>n</i> lattice along with a prime <i>q</i>.</p>
+    <p>We have the function <i>t<sub>q</sub>(m)</i> which gives the highest power of <i>q</i> that divides the positive integer <i>m</i>. We also define <i>t<sub>q</sub>(0)</i> to be infinity.</p>
     <p>For each lattice point <i>P=(x,y)</i>, we calculate <i>A=t<sub>q</sub>(x)</i>, <i>B=t<sub>q</sub>(y)</i>, and <i>C=t<sub>q</sub>(n)</i>.</p>
     <p>If <i>A</i> is smallest, color the point blue. If <i>B</i> is smallest, color the point green. If <i>C</i> is smallest, color the point red.</p>
     <p>In the case of a tie involving <i>A</i>, the winner is <i>A</i>. In case of a tie between <i>B</i> and <i>C</i>, the winner is <i>B</i>. </p>
@@ -61,7 +62,7 @@ def picture_time(str1=input_box('10', type = str, width=10, label='n'),
     print("This is the coloring for a " + str(nn) + "x" + str(nn) + " lattice, with q = " + str(qq) + ".")
     print("")
 </script></div></p>
-<p>Note: It's easy to break this! If <i>q</i> isn't prime, or if <i>n</i> isn't a positive integer, you'll get an error message. Choosing appropriate numbers should fix things. If the numbers get too large, it may get stuck. You can hit the Initialize button to restart.</p>
+<p>Note: It's easy to break this! If <i>q</i> isn't prime, or if <i>n</i> isn't a positive integer, you'll get an error message. Choosing appropriate numbers should fix things. If the numbers get too large, it may get stuck. You can hit the Initialize button to restart, or just reload the webpage.</p>
 <p>This visualizer was created in <a href="https://www.sagemath.org">SageMath</a> by <a href="https://cshor.org">Caleb Shor</a> in May 2026. SageMath is free! Try it out at <a href="https://cocalc.com">CoCalc</a>. (And feel free to copy the code for this application from this page's html source.)</p>
   </body>
 </html>
